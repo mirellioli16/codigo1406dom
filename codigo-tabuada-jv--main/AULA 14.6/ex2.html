@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input id= "nome" placeholder= "Digite um nome.. onkeyup="destacar()">
+   <ol class="listaDeNomes"> 
+   <li>João</li>
+   <li>Márcio</li>
+   <li>Fabiana</li>
+   <li>Marcos</li>
+   <li>Maria</li>
+   <li>Robson</li>
+   <li>Jorge</li>
+   <li>Lucas</li>
+
+   </ol>
+   <script>
+    function destacar(){
+        console.log("entrei");
+        var NOME= Document.querySelector("#nome");
+        var lista = document.querySelector("#listaDeNomes");
+        var listaDeNomes = lista.querySelectorAll("li");
+        var novaLista =[];
+      
+        for (var i = 0; 1 <listaDeNomes.length; i++) {
+            var nomeAtual = listaDeNomes[i].textContent;
+            if(nome.value == nomeAtual){
+            var li = document.createElement("li");
+            var strong = document.createElement("strong") ;
+            strong.innerText = nomeAtual;
+            li.appendChild(strong);
+            novaLista.push(li);
+            }else{
+                var li = document.createElement("li");
+                li.innerText = nomeAtual;
+                novaLista.push(li);
+
+            }
+            lista.innerText ="";
+            for (var i = 0; i < novaLista.length; i++){
+                lista.appendChild(novaLista[i]);
+            
+            }
+            conse.log(novaLista)
+        }
+
+    }
+   </script>
+</body>
+</html>
